@@ -1,8 +1,8 @@
 import pygame
-from pygame.sprite import Sprite
+from alien_invasion.game_sprite import GameSprite
 
 
-class Bullet(Sprite):
+class Bullet(GameSprite):
     """ A class to manage bullets fired from the ship."""
 
     def __init__(self, ai_settings, screen, ship):

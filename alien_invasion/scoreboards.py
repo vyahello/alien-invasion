@@ -1,12 +1,40 @@
 import pygame.font
+from abc import ABC, ABCMeta, abstractmethod
 from pygame.sprite import Group
 from alien_invasion.ship import Ship
 
 
-class Scoreboard(object):
+class Scoreboard(ABC):
+    """Represent abstraction for a scoreboard."""
+
+    __metaclass__ = ABCMeta
+
+    @abstractmethod
+    def prep_score(self):
+        pass
+
+    @abstractmethod
+    def prep_high_score(self):
+        pass
+
+    @abstractmethod
+    def prep_level(self):
+        pass
+
+    @abstractmethod
+    def prep_ships(self):
+        pass
+
+    @abstractmethod
+    def show_score(self):
+        pass
+
+
+class GameScoreboard(Scoreboard):
     """A class to report scoring information."""
     def __init__(self, ai_settings, screen, stats):
         """Initialize scorekeeping attributes."""
+
         self.screen = screen
         self.screen_rect = screen.get_rect()
         self.ai_settings = ai_settings

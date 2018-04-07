@@ -1,7 +1,19 @@
+from abc import ABC, ABCMeta, abstractmethod
+
 _score_path = 'alien_invasion/stats/high_score.txt'
 
 
-class GameStats(object):
+class Stats(ABC):
+    """Represent abstraction for stats."""
+
+    __metaclass__ = ABCMeta
+
+    @abstractmethod
+    def reset_stats(self):
+        pass
+
+
+class GameStats(Stats):
     """Track statistics for Alien Invasion."""
 
     def __init__(self, ai_settings):

@@ -332,7 +332,7 @@ def update_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets):
 def update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets):
     """
     Check if the fleet is at an edge,
-        and then update the postions of all aliens in the fleet.
+        and then update the positions of all aliens in the fleet.
     """
 
     # Look for alien-ship collisions.

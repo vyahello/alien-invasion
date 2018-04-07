@@ -1,8 +1,10 @@
 import pygame
-from pygame.sprite import Sprite
+from alien_invasion.game_sprite import GameSprite
+
+_alien_image = "alien_invasion/images/alien.png"
 
 
-class Alien(Sprite):
+class Alien(GameSprite):
     """ A class to represent a single alien in the fleet."""
 
     def __init__(self, ai_settings, screen):
@@ -12,7 +14,7 @@ class Alien(Sprite):
         self.ai_settings = ai_settings
 
         # Load the alien image and set it's rect attribute.
-        self.image = pygame.image.load("alien_invasion/images/alien.png")
+        self.image = pygame.image.load(_alien_image)
         self.rect = self.image.get_rect()
 
         # Starting each new alien at the top left of the screen.

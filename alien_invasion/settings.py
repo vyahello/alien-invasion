@@ -1,4 +1,21 @@
-class Settings(object):
+from abc import ABC, ABCMeta, abstractmethod
+
+
+class Settings(ABC):
+    """Represent abstraction for stats."""
+
+    __metaclass__ = ABCMeta
+
+    @abstractmethod
+    def initialize_dynamic_settings(self):
+        pass
+
+    @abstractmethod
+    def increase_speed(self):
+        pass
+
+
+class GameSettings(Settings):
     """ A class to store all the settings for Alien Invasion. """
 
     def __init__(self):

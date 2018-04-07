@@ -1,9 +1,12 @@
 import pygame
-from pygame.sprite import Sprite
+from alien_invasion.game_sprite import GameSprite
+
+_ship_image = "alien_invasion/images/ship.png"
 
 
-class Ship(Sprite):
-    """ A class representing a singgle instance of a ship."""
+class Ship(GameSprite):
+    """ A class representing a single instance of a ship."""
+
     def __init__(self, ai_settings, screen):
         """ Initializing the screen and set it's starting position."""
         super().__init__()
@@ -11,7 +14,7 @@ class Ship(Sprite):
         self.ai_settings = ai_settings
 
         # Load the ship and get it's rect
-        self.image = pygame.image.load("alien_invasion/images/ship.png")
+        self.image = pygame.image.load(_ship_image)
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 

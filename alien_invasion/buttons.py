@@ -1,7 +1,22 @@
+from abc import ABC, ABCMeta, abstractmethod
 import pygame.font
 
 
-class Button():
+class Button(ABC):
+    """Represent abstraction for a button."""
+
+    __metaclass__ = ABCMeta
+
+    @abstractmethod
+    def prep_msg(self, msg):
+        pass
+
+    @abstractmethod
+    def draw_button(self):
+        pass
+
+
+class GameButton(Button):
     """ A class to create a button. """
     def __init__(self, screen, msg):
         """Initialize button attributes."""
