@@ -4,6 +4,11 @@
 This project was inspired by famous book "Python Crash Course: A Hands-On, Project-Based Introduction to Programming" by Eric Matthes.
 In a nutshell it is a classic type arcade game based on destroying UFOs in a far far away universe.
 
+## Run game
+```bash
+~ python alien_invasion.py
+```
+
 ## Contributing
 
 ### Setup
