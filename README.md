@@ -9,6 +9,9 @@ In a nutshell it is a classic type arcade game based on destroying UFOs in a far
 ~ python alien_invasion.py
 ```
 
+## Demo
+![Screenshot](alien_invasion/images/alien_invasion.png)
+
 ## Contributing
 
 ### Setup
