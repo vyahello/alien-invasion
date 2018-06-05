@@ -1,5 +1,5 @@
 import pytest
-from alien_invasion.settings import GameSettings, Settings
+from alien_invasion.settings import GameSettings
 
 
 @pytest.fixture(scope="module")
