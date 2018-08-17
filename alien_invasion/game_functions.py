@@ -213,8 +213,7 @@ def create_fleet(ai_settings, screen, ship, aliens):
     # Create an alien and find the number of aliens in a row.
     alien = Alien(ai_settings, screen)
     number_aliens_x = get_number_aliens_x(ai_settings, alien.rect.width)
-    number_rows = get_number_rows(ai_settings, ship.rect.height,
-                                  alien.rect.height)
+    number_rows = get_number_rows(ai_settings, ship.rect.height, alien.rect.height)
 
     # Create the first row of aliens.
     for row_number in range(number_rows):
@@ -252,8 +251,7 @@ def get_number_aliens_x(ai_settings, alien_width):
 def get_number_rows(ai_settings, ship_height, alien_height):
     """Determine the number of rows of aliens that fit on the screen."""
 
-    available_space_y = (ai_settings.screen_height - (3 * alien_height) -
-                         ship_height)
+    available_space_y = (ai_settings.screen_height - (3 * alien_height) - ship_height)
     number_rows = int(available_space_y / (2 * alien_height))
     return number_rows
 
@@ -292,8 +290,7 @@ def ship_hit(ai_settings, screen, stats, sb, ship, aliens, bullets):
     create_fleet(ai_settings, screen, ship, aliens)
 
 
-def update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets,
-                  play_button):
+def update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button):
     """ Update images on the screen and flip to the new screen """
 
     # Redraw the screen each time it passes the loop
@@ -325,8 +322,7 @@ def update_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets):
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
 
-    check_bullet_alien_collisions(ai_settings, screen, stats, sb, ship, aliens,
-                                  bullets)
+    check_bullet_alien_collisions(ai_settings, screen, stats, sb, ship, aliens, bullets)
 
 
 def update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets):

@@ -35,20 +35,15 @@ def _run_game():
 
     # Starting main loop for the game
     while True:
-
-        game_functions.check_events(ai_settings, screen, stats, sb, play_button, ship,
-                                    aliens, bullets)
+        game_functions.check_events(ai_settings, screen, stats, sb, play_button, ship, aliens, bullets)
 
         if stats.game_active:
             bullets.update()
-            game_functions.update_bullets(ai_settings, screen, stats, sb, ship, aliens,
-                                          bullets)
-            game_functions.update_aliens(ai_settings, screen, stats, sb, ship, aliens,
-                                         bullets)
+            game_functions.update_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets)
+            game_functions.update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets)
             ship.update()
 
-        game_functions.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets,
-                                     play_button)
+        game_functions.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button)
 
 
 if __name__ == '__main__':
